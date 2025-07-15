@@ -6,6 +6,11 @@ interface StockSymbolProps {
   onClick: (symbol: string) => void;
 }
 
+/**
+ * StockSymbol bileşeni, verilen sembolü bir buton olarak gösterir ve tıklanınca üst bileşene bildirir.
+ * @param symbol Gösterilecek hisse senedi sembolü
+ * @param onClick Sembol tıklandığında çağrılacak fonksiyon
+ */
 const StockSymbol = ({ symbol, onClick }: StockSymbolProps) => {
   return (
     <Button

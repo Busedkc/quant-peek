@@ -6,6 +6,10 @@ import { TrendingUp } from "lucide-react";
 import StockSymbol from "./StockSymbol";
 import { useToast } from "@/hooks/use-toast";
 
+/**
+ * StockPredictor bileşeni, kullanıcıdan bir hisse senedi sembolü alır ve AI destekli fiyat tahmini sunar.
+ * Popüler sembolleri hızlı seçim için gösterir ve tahmin sonuçlarını listeler.
+ */
 const StockPredictor = () => {
   const [symbol, setSymbol] = useState("");
   const [predictions, setPredictions] = useState<any[]>([]);
@@ -17,10 +21,18 @@ const StockPredictor = () => {
     "ORCL", "CSCO", "IBM", "QCOM", "JPM", "BAC"
   ];
 
+  /**
+   * Kullanıcı popüler bir sembole tıkladığında sembolü inputa yazar.
+   * @param clickedSymbol Seçilen hisse senedi sembolü
+   */
   const handleSymbolClick = (clickedSymbol: string) => {
     setSymbol(clickedSymbol);
   };
 
+  /**
+   * Kullanıcıdan alınan sembol ile AI tahmini oluşturur ve ekrana ekler.
+   * Sembol girilmemişse uyarı gösterir.
+   */
   const handlePredict = () => {
     if (!symbol) {
       toast({

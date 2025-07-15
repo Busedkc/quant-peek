@@ -2,6 +2,9 @@
 import { Button } from "@/components/ui/button";
 import { TrendingUp } from "lucide-react";
 
+/**
+ * Header bileşeni, uygulamanın üst kısmında başlık ve özellik etiketlerini gösterir.
+ */
 const Header = () => {
   return (
     <header className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4">

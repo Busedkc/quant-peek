@@ -139,6 +139,11 @@ function dispatch(action: Action) {
 
 type Toast = Omit<ToasterToast, "id">
 
+/**
+ * toast fonksiyonu, yeni bir toast bildirimi oluşturur ve yönetim fonksiyonları döner.
+ * @param props Toast içeriği ve opsiyonel ayarları
+ * @returns id, dismiss ve update fonksiyonları
+ */
 function toast({ ...props }: Toast) {
   const id = genId()
 
@@ -168,6 +173,10 @@ function toast({ ...props }: Toast) {
   }
 }
 
+/**
+ * useToast custom hook'u, toast bildirimlerini yönetmek için state ve yardımcı fonksiyonlar sağlar.
+ * @returns toast ekleme, kapama ve mevcut toast listesini döner
+ */
 function useToast() {
   const [state, setState] = React.useState<State>(memoryState)
 

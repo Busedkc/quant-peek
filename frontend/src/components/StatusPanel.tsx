@@ -2,6 +2,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { TrendingUp } from "lucide-react";
 
+/**
+ * StatusPanel bileşeni, API ve modelin durumunu kullanıcıya gösterir.
+ */
 const StatusPanel = () => {
   return (
     <Card className="bg-slate-800/50 border-slate-700">

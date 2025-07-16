@@ -18,6 +18,7 @@
   * Developed with **TypeScript** and **JavaScript**.
   * Visualizes stock data and RSI through interactive web components.
   * Allows users to view charts directly from the browser via **HTTPS**.
+  * Live Demo: https://quant-peek-iltf.vercel.app/
 
 * **Desktop Visualization (Optional CLI View)**
 
